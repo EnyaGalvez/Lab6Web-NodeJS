@@ -23,8 +23,17 @@ a continuación se le muestra un resumen de las resoluciones:
 3. Cambio de formato en la ruta /info y ajuste de respuesta json, asegurando encabezado JSON declarado
 4. Lectura y envío de datos en la ruta /api/student corregidos
 
+### Comprobación de resultado desde un cliente
+#### *Resultados finales del servidor*
+| Método | Ruta           | Descripción                              | Content-Type     |
+|--------|----------------|------------------------------------------|------------------|
+| GET    | `/`            | Comprueba que el servidor está activo    | text/plain       |
+| GET    | `/info`        | Devuelve un mensaje informativo en JSON  | application/json |
+| GET    | `/api/student` | Devuelve el contenido de `datos.json`    | application/json |
+| GET    | cualquier otra | Devuelve error 404                       | text/plain       |
 
-#### Documentación de mensajes de error
+
+#### *Documentación de mensajes de error*
 A continuación se muestran los mensajes de error obtenidos en pruebas realizadas después de cada resolución:
 1. Se presenta nuevo error de inexistencia de parentesis porque hacía falta en función listen:
 ````
@@ -61,4 +70,4 @@ node:internal/process/promises:288
 Node.js v18.19.1
 ```
 
-### Comprobación de resultado desde un cliente
+
