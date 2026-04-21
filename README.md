@@ -18,9 +18,13 @@ Node.js v18.19.1
 ### Solución de errores
 La solución de cada uno de los errores se encuentra documentada en el nuevo archivo 'servidor.js', <br>
 a continuación se le muestra un resumen de las resoluciones:
+1. Corrección de sintaxis en función createServer
+2. Implementación correcta y corrección de sintaxis en server.listen
+3. Cambio de formato en la ruta /info y ajuste de respuesta json, asegurando encabezado JSON declarado
+4. Lectura y envío de datos en la ruta /api/student corregidos
 
 
-#### Mensajes de error
+#### Documentación de mensajes de error
 A continuación se muestran los mensajes de error obtenidos en pruebas realizadas después de cada resolución:
 1. Se presenta nuevo error de inexistencia de parentesis porque hacía falta en función listen:
 ````
@@ -56,3 +60,5 @@ node:internal/process/promises:288
 
 Node.js v18.19.1
 ```
+
+### Comprobación de resultado desde un cliente
