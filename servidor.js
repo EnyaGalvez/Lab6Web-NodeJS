@@ -12,6 +12,7 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.url === "/info") {
+    // Primera corrección: 
     res.writeHead(200, { "Content-Type": "application-json" })
     res.end("Ruta de información")
     return

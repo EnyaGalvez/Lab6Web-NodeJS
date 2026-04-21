@@ -1,0 +1,20 @@
+{
+  "name": "lab6nodejs",
+  "version": "1.0.0",
+  "description": "Laboratorio 6: NODE JS",
+  "main": "servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnyaGalvez/Lab6Web-NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnyaGalvez/Lab6Web-NodeJS/issues"
+  },
+  "homepage": "https://github.com/EnyaGalvez/Lab6Web-NodeJS#readme"
+}
