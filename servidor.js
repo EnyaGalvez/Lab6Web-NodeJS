@@ -28,6 +28,12 @@ const server = http.createServer(async (req, res) => {
     return
   }
 
+  if (req.url === "/saludo") {
+    res.writeHead(200, { "Content-Type": "text/plain" })
+    res.end("Bienvenido/a la pagina de informacion de estudiantes")
+    return
+  }
+
   if (req.url === "/api/student") {
     /* Cuarta corrección:
     * 1. El Promise estaba sin resolver, sin await, texto es un objeto Promise y al ejecutar JSON.stringify(texto)
