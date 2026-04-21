@@ -12,9 +12,12 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.url === "/info") {
-    // Primera corrección: 
-    res.writeHead(200, { "Content-Type": "application-json" })
-    res.end("Ruta de información")
+    /* Primera corrección: 
+      1. application-json estaba mal escrito, debia ser application/json (slash, no gión), al poner un '-' el
+         cliente no interpreta la respuesta como JSON.
+      2. la ruta tiene Content-Type, pero el application/json responde en texto plano, lo que es inconsistente. */
+    res.writeHead(200, { "Content-Type": "application/json" })
+    res.end(JSON.stringify({ message: "Ruta de información" }))
     return
   }
 
