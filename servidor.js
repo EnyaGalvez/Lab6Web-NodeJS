@@ -5,6 +5,12 @@ import path from "path"
 const PORT = 3000
 
 const server = http.createServer(async (req, res) => {
+  if (req.url === "/") {
+    res.writeHead(200, { "Content-Type": "text/plain" })
+    res.end("Servidor activo")
+    return
+  }
+
   if (req.url === "/info") {
     /* Tercera corrección: 
     * 1. application-json estaba mal escrito, debia ser application/json (slash, no gión), al poner un '-' el
@@ -17,15 +23,17 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.url === "/api/student") {
-    const filePath = path.join(process.cwd(), "datos.json")
     /* Cuarta corrección:
-    * El Promise estaba sin resolver, sin await, texto es un objeto Promise y al ejecutar JSON.stringify(texto)
-    * se obtiene un resultado vacío. Al agregar await, se espera la Promise de fs.readFile, permitiendo que se 
-    * obtenga el contenido real del archivo.
+    * 1. El Promise estaba sin resolver, sin await, texto es un objeto Promise y al ejecutar JSON.stringify(texto)
+    *    se obtiene un resultado vacío. Al agregar await, se espera la Promise de fs.readFile, permitiendo que se 
+    *    obtenga el contenido real del archivo.
+    * 2. No existe un archio datos.json, hay que crearlo en la raíz del proyecto
+    * 3. El stringify hace que el json no se mire bien en eln navegador para este caso
     */
+    const filePath = path.join(process.cwd(), "datos.json")
     const texto = await fs.readFile(filePath, "utf-8")
     res.writeHead(200, { "Content-Type": "application/json" })
-    res.end(JSON.stringify(texto))
+    res.end(texto)
     return
   }
 

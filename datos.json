@@ -1,0 +1,12 @@
+[
+    { "id": 1, "nombre": "Ana García", "carrera": "Ciencias de la Computación" },
+    { "id": 2, "nombre": "Luis Pérez", "carrera": "Ciencias de la Computación" },
+    { "id": 3, "nombre": "María López", "carrera": "Bioquímica" },
+    { "id": 4, "nombre": "Joaquín Sánchez", "carrera": "Matemática aplicada" },
+    { "id": 5, "nombre": "Sofía Martínez", "carrera": "Arquitectura" },
+    { "id": 6, "nombre": "Diego Fernández", "carrera": "Ciencias de la Computación" },
+    { "id": 7, "nombre": "Valentina Gómez", "carrera": "Bioquímica" },
+    { "id": 8, "nombre": "Matías Rodríguez", "carrera": "Matemática aplicada" },
+    { "id": 9, "nombre": "Camila Torres", "carrera": "Arquitectura" },
+    { "id": 10, "nombre": "Federico Díaz", "carrera": "Ciencias de la Computación" }
+]
