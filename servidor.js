@@ -78,4 +78,10 @@ const server = http.createServer(async (req, res) => {
 */
 server.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`)
+  console.log(`Rutas disponibles:`)
+  console.log(`  GET /`)
+  console.log(`  GET /info`)
+  console.log(`  GET /saludo`)
+  console.log(`  GET /api/student`)
+  console.log(`  GET /api/status`)
 })
