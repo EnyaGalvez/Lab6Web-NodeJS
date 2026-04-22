@@ -1,5 +1,7 @@
-# Lab6Web-NodeJS
-Laboratorio 6: NODE JS
+# Laboratorio 6: NODE JS
+Enya Gálvez - 24693 <br>
+Sistemas y tecnologías web <br>
+Servidor HTTP con Node.js (v18.19.1)
 
 ## Parte 1
 ### Ejecución inicial del servidor
@@ -30,7 +32,6 @@ a continuación se le muestra un resumen de las resoluciones:
 | GET    | `/`            | Comprueba que el servidor está activo    | text/plain       |
 | GET    | `/info`        | Devuelve un mensaje informativo en JSON  | application/json |
 | GET    | `/api/student` | Devuelve el contenido de `datos.json`    | application/json |
-| GET    | `/saludo` | Devuelve un Saludo con una pequeña diferencia dependiendo de la hora actual (la hora registrada en la computadora)                      | text/plain       |
 | GET    | cualquier otra | Devuelve error 404                       | text/plain       |
 
 #### *Documentación de mensajes de error*
@@ -69,5 +70,12 @@ node:internal/process/promises:288
 
 Node.js v18.19.1
 ```
+
+## Parte 2
+Ahora se añaden las rutas:
+| Método | Ruta           | Descripción                              | Content-Type     |
+|--------|----------------|------------------------------------------|------------------|
+| GET    | `/saludo` | Devuelve un Saludo con una pequeña diferencia dependiendo de la hora actual (la hora registrada en la computadora). Usa el archivo de logica `saludo.js`                    | application/json       |
+| GET    | `/api/status` | Brinda una respuesta json con Ok, Status o Puerto dependiendo del caso    | application/json |
 
 

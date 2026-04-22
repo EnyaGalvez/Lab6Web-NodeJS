@@ -16,7 +16,7 @@ const server = http.createServer(async (req, res) => {
     const info = {
       mensaje: "El Server de información académica funcionando correctamente",
       curso: "Sistemas y tecnologías web",
-      tecnologia: "Node.js - modulo http nativo"
+      tecnologia: "Node.js (v18.19.1) - modulo http nativo"
 
     }
     /* Tercera corrección: 
