@@ -1,6 +1,7 @@
 import http from "http"
 import fs from "fs/promises"
 import path from "path"
+import { obtenerSaludo } from "./saludo.js"
 
 const PORT = 3000
 
@@ -29,8 +30,9 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.url === "/saludo") {
-    res.writeHead(200, { "Content-Type": "text/plain" })
-    res.end("Bienvenido/a la pagina de informacion de estudiantes")
+    const mensaje = obtenerSaludo()
+    res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" })
+    res.end(mensaje)
     return
   }
 

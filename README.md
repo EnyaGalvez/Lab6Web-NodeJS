@@ -30,8 +30,8 @@ a continuación se le muestra un resumen de las resoluciones:
 | GET    | `/`            | Comprueba que el servidor está activo    | text/plain       |
 | GET    | `/info`        | Devuelve un mensaje informativo en JSON  | application/json |
 | GET    | `/api/student` | Devuelve el contenido de `datos.json`    | application/json |
+| GET    | `/saludo` | Devuelve un Saludo con una pequeña diferencia dependiendo de la hora actual (la hora registrada en la computadora)                      | text/plain       |
 | GET    | cualquier otra | Devuelve error 404                       | text/plain       |
-
 
 #### *Documentación de mensajes de error*
 A continuación se muestran los mensajes de error obtenidos en pruebas realizadas después de cada resolución:
