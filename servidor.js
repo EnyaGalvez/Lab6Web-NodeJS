@@ -62,8 +62,14 @@ const server = http.createServer(async (req, res) => {
     return
   }
 
-  res.writeHead(200, { "Content-Type": "text/plain" })
-  res.end("Ruta no encontrada")
+  const respuesta404 = {
+    error: "Ruta no encontrada",
+    rutaVisitada: req.url,
+    mensaje: `La ruta "${req.url}" no existe en este servidor.`
+  }
+
+  res.writeHead(404, { "Content-Type": "application/json" })
+  res.end(JSON.stringify(respuesta404, null, 2))
 }) // Primera Corrección: Cierre correcto del callback de createServer (faltaba el paréntesis de cierre)
 
 /* Segunda corrección: 
